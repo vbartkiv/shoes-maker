@@ -1,0 +1,23 @@
+{
+  "name": "shoes-maker",
+  "version": "1.0.0",
+  "description": "Shoes Maker helper app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbartkiv/shoes-maker.git"
+  },
+  "author": "vbartkiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbartkiv/shoes-maker/issues"
+  },
+  "homepage": "https://github.com/vbartkiv/shoes-maker#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
