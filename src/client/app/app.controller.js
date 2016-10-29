@@ -21,8 +21,9 @@
         });
 
         function search() {
+            var regExp = new RegExp(vm.sole, 'gi');
             vm.res = _.filter(data.items, function (item) {
-                return ~item.sole.indexOf(vm.sole);
+                return regExp.test(item.sole);
             });
         }
     }
