@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua" manifest="/appcache">
+<html manifest="/appcache">
 
 <head>
 	<meta charset="UTF-8">
@@ -9,10 +9,12 @@
 </head>
 
 <body ng-controller="appController as vm">
-
+	
 	<md-toolbar>
 		<div class="md-toolbar-tools">
-			<h2>Shoes Maker (ALPHA)</h2>
+			<h2>Shoes Maker (ALPHA) </h2>
+			<span flex></span>
+			<span ng-bind="vm.cache.status"></span>
 		</div>
 	</md-toolbar>
 
@@ -38,12 +40,12 @@
 					<md-card>
 						<md-card-title>
 							<md-card-title-text>
-								<span class="md-headline">{{item.sole}}</span>
+								<span class="md-headline" ng-bind="item.sole"></span>
 							</md-card-title-text>
 						</md-card-title>
 						<md-card-content>
-							<p>{{item.shoe}}</p>
-							<p>{{item.param1}}</p>
+							<p ng-bind="item.shoe"></p>
+							<p ng-bind="item.param1"></p>
 							<p>{{item.gender == 'man' ? 'Чоловіча' : 'Жіноча'}}</p>
 						</md-card-content>
 					</md-card>
@@ -69,6 +71,7 @@
 	<!-- app -->
 	<script type="text/javascript" src="app/app.module.js"></script>
 	<script type="text/javascript" src="app/app.controller.js"></script>
+	<script type="text/javascript" src="app/services/appcache.service.js"></script>
 </body>
 
 </html>

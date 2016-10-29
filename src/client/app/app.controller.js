@@ -1,13 +1,16 @@
 (function () {
+    'use strict';
+
     angular
         .module('ShoesMaker')
         .controller('appController', appController);
 
-    appController.$inject = ['$http'];
-    function appController($http) {
+    appController.$inject = ['$http', 'AppCache'];
+    function appController($http, AppCache) {
         var vm = this;
         var data;
 
+        vm.cache = AppCache;
         vm.search = search;
         vm.res = [];
 
